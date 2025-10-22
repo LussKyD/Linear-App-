@@ -1,7 +1,7 @@
 
 // Clock App (Alarm, Timer, Stopwatch)
-// Lightweight, no dependencies. Alarms use localStorage and only trigger while page is open.
-// For production you'd add a service worker + push server to wake the app when closed.
+// Lightweight, no dependencies. Alarms will use localStorage and only trigger while page is open.
+
 
 (() => {
   // Utilities
