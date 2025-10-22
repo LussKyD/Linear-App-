@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Clock App — Alarm • Timer • Stopwatch • Widgets</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Clock App</h1>
+
+    <section class="row">
+      <div class="card clock-widget">
+        <h2>Local Clock</h2>
+        <div id="localClock" class="big-time">--:--:--</div>
+        <div id="localDate" class="small-text"></div>
+      </div>
+
+      <div class="card alarm-widget">
+        <h2>Alarms</h2>
+        <form id="alarmForm" class="inline-form">
+          <input id="alarmTime" type="time" required>
+          <input id="alarmLabel" type="text" placeholder="label (optional)">
+          <button type="submit">Set Alarm</button>
+        </form>
+        <ul id="alarmsList"></ul>
+      </div>
+    </section>
+
+    <section class="row">
+      <div class="card timer-widget">
+        <h2>Timer</h2>
+        <div class="timer-display" id="timerDisplay">00:00:00</div>
+        <div class="controls">
+          <input id="timerInput" placeholder="mm:ss or hh:mm:ss">
+          <button id="timerStart">Start</button>
+          <button id="timerPause">Pause</button>
+          <button id="timerReset">Reset</button>
+        </div>
+      </div>
+
+      <div class="card stopwatch-widget">
+        <h2>Stopwatch</h2>
+        <div class="stopwatch-display" id="swDisplay">00:00:00.000</div>
+        <div class="controls">
+          <button id="swStart">Start</button>
+          <button id="swLap">Lap</button>
+          <button id="swStop">Stop</button>
+          <button id="swReset">Reset</button>
+        </div>
+        <ol id="swLaps"></ol>
+      </div>
+    </section>
+
+    <section class="row">
+      <div class="card widgets">
+        <h2>Embeddable Widgets</h2>
+        <p>Copy the code below to embed a simple digital clock on another page:</p>
+        <textarea readonly class="embed-code" id="embedCode">&lt;div id="miniClock"&gt;&lt;/div&gt;
+&lt;script&gt;function startMiniClock(el){const e=document.getElementById(el);setInterval(()=>{const d=new Date();e.textContent=d.toLocaleTimeString()},1000);}startMiniClock('miniClock');&lt;/script&gt;</textarea>
+      </div>
+    </section>
+
+    <footer>
+      <p>Notifications require permission. Alarm works while the page is open. For background alarms you need server push + service worker.</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

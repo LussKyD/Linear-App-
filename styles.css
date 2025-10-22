@@ -1,0 +1,31 @@
+
+:root{
+  --bg:#0f1724; --card:#111827; --accent:#06b6d4; --muted:#94a3b8; --glass: rgba(255,255,255,0.03);
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+body{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin:0; background:linear-gradient(180deg,#08101b, #071024); color:#e6eef6; min-height:100vh;
+  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+}
+.container{max-width:1100px;margin:28px auto;padding:18px}
+h1{margin:0 0 12px 0;font-size:28px}
+.row{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px}
+.card{background:var(--card);padding:14px;border-radius:12px;flex:1;min-width:260px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+.big-time{font-size:36px;font-weight:600}
+.small-text{color:var(--muted)}
+.inline-form{display:flex;gap:8px;flex-wrap:wrap}
+.inline-form input[type="time"]{padding:6px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:var(--glass);color:inherit}
+.inline-form input[type="text"]{padding:6px;border-radius:8px;min-width:140px}
+.inline-form button{padding:6px 10px;border-radius:8px;border:none;background:var(--accent);color:#022;cursor:pointer}
+.alarm-widget ul{list-style:none;padding:0;margin:8px 0 0 0}
+.alarm-widget li{display:flex;justify-content:space-between;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.02);margin-bottom:6px}
+.timer-display{font-size:26px;font-weight:600;margin:8px 0}
+.controls{display:flex;gap:8px;flex-wrap:wrap}
+.controls input{padding:6px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:var(--glass);color:inherit}
+.controls button{padding:6px 10px;border-radius:8px;border:none;background:var(--accent);color:#022;cursor:pointer}
+.stopwatch-display{font-size:22px;margin:6px 0}
+embed-code, .embed-code{width:100%;min-height:88px;padding:8px;border-radius:8px;background:#08121a;border:1px solid rgba(255,255,255,0.02);color:var(--muted);font-family:monospace}
+footer{margin-top:18px;color:var(--muted);font-size:13px}
+ol#swLaps{max-height:120px;overflow:auto;padding-left:16px}
